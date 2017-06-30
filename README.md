@@ -13,8 +13,8 @@ Just install [Xamarin.iOS.CameraViewController](https://www.nuget.org/packages/X
 
 ### Build
 
-First step is to build [ALCameraViewController](https://github.com/AlexLittlejohn/ALCameraViewController). On a mac with regular development tools for iOS development plus Xamarin, just run `make` at the project's directory. It'll clone [ALCameraViewController](https://github.com/AlexLittlejohn/ALCameraViewController) from github and build the framework.
+First step is to build [ALCameraViewController](https://github.com/AlexLittlejohn/ALCameraViewController): On a mac with regular development tools for iOS plus Xamarin development, just run `make` at the project's directory. It'll clone [ALCameraViewController](https://github.com/AlexLittlejohn/ALCameraViewController) from github and build the framework.
 
-Second step is to build on Visual Studio. I'm using VS 15.2 (2017). 
+Second step is to build on Visual Studio. I'm using VS 15.2 (2017).
 
 If you want to create a NuGet package: build the solution in Release mode and then, at project's directory, execute: `NuGet pack Xamarin.iOS.CameraViewController.csproj -Prop Configuration=Release`.
