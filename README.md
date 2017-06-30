@@ -1,9 +1,9 @@
 # Xamarin.iOS.CameraViewController
-ALCameraViewController bindings for Xamarin.iOS
+ALCameraViewController bindings for Xamarin.iOS.
 
 Xamarin.iOS.CameraViewController is a Xamarin.iOS binding to [ALCameraViewController](https://github.com/AlexLittlejohn/ALCameraViewController):
 > A camera view controller with custom image picker and image cropping. Written in Swift.
-> @AlexLittlejohn
+> - @AlexLittlejohn
 
 ## Install
 
