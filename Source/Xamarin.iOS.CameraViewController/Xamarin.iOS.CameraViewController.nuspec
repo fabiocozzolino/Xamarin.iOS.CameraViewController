@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.0.0</version>
+    <title>Xamarin.iOS.CameraViewController</title>
+    <authors>Matheus Neder</authors>
+    <owners>Matheus Neder</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ALCameraViewController bindings for Xamarin.iOS.</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>xamarin ios camera imagecrop alcameraviewcontroller</tags>
+    <projectUrl>https://github.com/matheusneder/Xamarin.iOS.CameraViewController</projectUrl>
+    <dependencies>
+      <group targetFramework="xamarinios10">
+        <dependency id="Xamarin.Swift3" version="3.0.1" />
+        <dependency id="Xamarin.Swift3.AVFoundation" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.Core" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.CoreAudio" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.CoreGraphics" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.CoreImage" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.CoreLocation" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.CoreMedia" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.Darwin" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.Dispatch" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.Foundation" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.ObjectiveC" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.Photos" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.QuartzCore" version="3.1.0.2" />
+        <dependency id="Xamarin.Swift3.UIKit" version="3.1.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
