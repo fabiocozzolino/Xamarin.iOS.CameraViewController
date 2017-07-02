@@ -20,15 +20,49 @@ Xamarin.iOS.CameraViewController is a Xamarin.iOS binding to ALCameraViewControl
 >
 > @AlexLittlejohn
 
-## Installation
+### Installation
 
-Just install [Xamarin.iOS.CameraViewController](https://www.nuget.org/packages/Xamarin.iOS.CameraViewController/) NuGet package.
+Install [Xamarin.iOS.CameraViewController](https://www.nuget.org/packages/Xamarin.iOS.CameraViewController/) NuGet package.
 
-## Contribute
+In the Info.plist
+```xml
+<plist version="1.0">
+<dict>
+	... add this entries to dict element
+	<key>NSCameraUsageDescription</key>
+	<string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
+    ...
+</dict>
+</plist>    
+```
 
-### Build
+### Usage
 
-First step is to build ALCameraViewController: On a mac with regular development tools for iOS plus Xamarin development (Xcode 8.3 and VS for Mac 7), just run `make` at the project's directory. It'll clone ALCameraViewController from github (from a fork of mine at https://github.com/matheusneder/ALCameraViewController) and build the framework.
+To use this component couldn't be simpler.
+Add `using Xamarin.iOS.CameraViewController;` to the top of you controller file.
+
+In the ViewController
+
+```cs
+var cameraViewController = new CameraViewController(true, true,
+  (image, asset) => 
+  {
+    // Do something with your image here.
+    // If cropping is enabled this image will be the cropped version
+    
+    DismissViewController(true, null);   
+  });
+
+PresentViewController(cameraViewController, true, null);
+```
+
+### Contribute
+
+#### Build
+
+First step is to build ALCameraViewController: On a mac with regular development tools for iOS plus Xamarin development (I used Xcode 8.3 and VS for Mac 7), just run `make` at the project's directory. It will clone ALCameraViewController from github (from a fork of mine at https://github.com/matheusneder/ALCameraViewController) and build the framework.
 
 Second step is to build the solution on Visual Studio. I built from VS 15.2 (2017).
 
