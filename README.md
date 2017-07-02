@@ -27,14 +27,14 @@ Install [Xamarin.iOS.CameraViewController](https://www.nuget.org/packages/Xamari
 In the Info.plist
 ```xml
 <plist version="1.0">
-<dict>
-	... add this entries to dict element
-	<key>NSCameraUsageDescription</key>
-	<string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
+  <dict>
+    ... add this entries to dict element
+    <key>NSCameraUsageDescription</key>
+    <string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
     ...
-</dict>
+  </dict>
 </plist>    
 ```
 
