@@ -30,7 +30,7 @@ In the Info.plist
   <dict>
     ... add this entries to dict element
     <key>NSCameraUsageDescription</key>
-    <string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
+    <string>A custom message (will be shown to the user when iOS ask him for permission to access camera).</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>A custom message (will be shown to the user when iOS ask him for permission to access photo library).</string>
     ...
