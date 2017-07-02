@@ -62,7 +62,7 @@ PresentViewController(cameraViewController, true, null);
 
 #### Build
 
-First step is to build ALCameraViewController: On a mac with regular development tools for iOS plus Xamarin development (I used Xcode 8.3 and VS for Mac 7), just run `make` at the project's directory. It will clone ALCameraViewController from github (from a fork of mine at https://github.com/matheusneder/ALCameraViewController) and build the framework.
+First step is to build ALCameraViewController: On a mac with regular development tools for iOS plus Xamarin development (I used Xcode 8.3 and VS for Mac 7), just run `make` at the project's directory. It will clone ALCameraViewController from github (more specifically from this fork: https://github.com/matheusneder/ALCameraViewController) and build the framework.
 
 Second step is to build the solution on Visual Studio. I built from VS 15.2 (2017).
 
