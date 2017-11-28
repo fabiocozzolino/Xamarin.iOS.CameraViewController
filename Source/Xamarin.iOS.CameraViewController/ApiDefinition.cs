@@ -67,15 +67,10 @@ namespace Xamarin.iOS.CameraViewController
         [NullAllowed, Export("onCompletion", ArgumentSemantic.Copy)]
         Action<UIImage, PHAsset> OnCompletion { get; set; }
 
-        // -(instancetype _Nonnull)initWithCroppingEnabled:(BOOL)croppingEnabled allowsLibraryAccess:(BOOL)allowsLibraryAccess completion:(void (^ _Nonnull)(UIImage * _Nullable, PHAsset * _Nullable))completion __attribute__((objc_designated_initializer));
-        [Export("initWithCroppingEnabled:allowsLibraryAccess:completion:")]
+        // -(instancetype _Nonnull)initWithCroppingEnabled:(BOOL)croppingEnabled allowResizing:(BOOL)allowResizing allowMoving:(BOOL)allowMoving allowsLibrarySave:(BOOL)allowsLibrarySave allowsLibraryAccess:(BOOL)allowsLibraryAccess allowsSwapCameraOrientation:(BOOL)allowsSwapCameraOrientation allowVolumeButtonCapture:(BOOL)allowVolumeButtonCapture completion:(void (^ _Nonnull)(UIImage * _Nullable, PHAsset * _Nullable))completion __attribute__((objc_designated_initializer));
+        [Export("initWithCroppingEnabled:allowResizing:allowMoving:allowsLibrarySave:allowsLibraryAccess:allowsSwapCameraOrientation:allowVolumeButtonCapture:completion:")]
         [DesignatedInitializer]
-        IntPtr Constructor(bool croppingEnabled, bool allowsLibraryAccess, Action<UIImage, PHAsset> completion);
-
-        // -(instancetype _Nonnull)initWithCroppingEnabled:(BOOL)croppingEnabled allowsLibraryAccess:(BOOL)allowsLibraryAccess completion:(void (^ _Nonnull)(UIImage * _Nullable, PHAsset * _Nullable))completion __attribute__((objc_designated_initializer));
-        [Export("initWithCroppingParameters:allowsLibraryAccess:allowsSwapCameraOrientation:allowVolumeButtonCapture:completion:")]
-        [DesignatedInitializer]
-        IntPtr Constructor(CroppingParameters croppingParameters, bool allowsLibraryAccess, bool allowsSwapCameraOrientation, bool allowVolumeButtonCapture, Action<UIImage, PHAsset> completion);
+        IntPtr Constructor(bool croppingEnabled, bool allowResizing, bool allowMoving, bool allowsLibrarySave, bool allowsLibraryAccess, bool allowsSwapCameraOrientation, bool allowVolumeButtonCapture, Action<UIImage, PHAsset> completion);
 
         // @property (readonly, nonatomic) BOOL prefersStatusBarHidden;
         [Override]
@@ -198,29 +193,29 @@ namespace Xamarin.iOS.CameraViewController
         IntPtr Constructor([NullAllowed] string nibNameOrNil, [NullAllowed] NSBundle nibBundleOrNil);
     }
 
+    //[Xamarin.]
+    //interface CroppingParameters {
 
-    public class CroppingParameters {
+    //    // @property (nonatomic) AVCaptureDevicePosition currentPosition;
+    //    [Export("isEnabled", ArgumentSemantic.Copy)]
+    //    bool IsEnabled { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(UIImage * _Nullable, PHAsset * _Nullable) onCompletion;
-        //[Export("isEnabled", ArgumentSemantic.Copy)]
-        bool IsEnabled { get; set; }
+    //    // @property (nonatomic) AVCaptureDevicePosition currentPosition;
+    //    [Export("allowResizing", ArgumentSemantic.Copy)]
+    //    bool AllowResizing { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(UIImage * _Nullable, PHAsset * _Nullable) onCompletion;
-        //[Export("allowResizing", ArgumentSemantic.Copy)]
-        bool AllowResizing { get; set; }
+    //    // @property (nonatomic) AVCaptureDevicePosition currentPosition;
+    //    [Export("allowMoving", ArgumentSemantic.Copy)]
+    //    bool AllowMoving { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(UIImage * _Nullable, PHAsset * _Nullable) onCompletion;
-        //[Export("allowMoving", ArgumentSemantic.Copy)]
-        bool AllowMoving { get; set; }
+    //    // @property (nonatomic) AVCaptureDevicePosition currentPosition;
+    //    [Export("minimumSize", ArgumentSemantic.Copy)]
+    //    CGSize MinimumSize { get; set; }
 
-        // @property (copy, nonatomic) void (^ _Nullable)(UIImage * _Nullable, PHAsset * _Nullable) onCompletion;
-        //[Export("minimumSize", ArgumentSemantic.Copy)]
-        CGSize MinimumSize { get; set; }
-
-        //// -(instancetype _Nonnull)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil __attribute__((objc_designated_initializer));
-        //[Export("initWithIsEnable:allowResizing:allowMoving:minimumSize:")]
-        //[DesignatedInitializer]
-        //IntPtr Constructor(bool isEnabled, bool allowResizing, bool allowMoving, CGSize minimumSize);
-    }
+    //    // -(instancetype _Nonnull)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil __attribute__((objc_designated_initializer));
+    //    [Export("initWithIsEnable:allowResizing:allowMoving:minimumSize:")]
+    //    [DesignatedInitializer]
+    //    IntPtr Constructor(bool isEnabled, bool allowResizing, bool allowMoving, CGSize minimumSize);
+    //}
 }
 

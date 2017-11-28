@@ -260,3 +260,7 @@ paket-files/
 __pycache__/
 *.pyc
 /Source/Xamarin.iOS.CameraViewController/NativeReferences/CameraViewController.framework
+
+Source/Xamarin.iOS.CameraViewController/native-references-built
+
+Source/Xamarin.iOS.CameraViewController/NativeReferences/ALCameraViewController/
